@@ -31,3 +31,32 @@
 # Per levare una tendina: cancella il blocco, la voce torna un link normale.
 # Documentazione del funzionamento: commento in testa a _includes/masthead.html.
 # =====================================================================================
+
+Box:
+  - title: "Box Casa Pulita"
+    url: /negozio/categoria/box-casa-pulita/
+  - title: "Box Carta e Sacchetti"
+    url: /negozio/categoria/box-carta-sacchetti/
+  - title: "Box Igiene Persona"
+    url: /negozio/categoria/box-igiene/
+  - title: "Box Bimbo"
+    url: /negozio/categoria/box-bimbo/
+  - title: "Box Animali"
+    url: /negozio/categoria/box-animali/
+  - title: "Box Caffe' e Colazione"
+    url: /negozio/categoria/box-caffe-colazione/
+  - title: "Box Frutta Essiccata"
+    url: /negozio/categoria/box-frutta-essiccata/
+  - title: "Box Snack Secchi"
+    url: /negozio/categoria/box-snack-secchi/
+  - title: "Box Erbe e Spezie"
+    url: /negozio/categoria/box-erbe-spezie/
+  - title: "Box Dispensa Sottovuoto"
+    url: /negozio/categoria/box-dispensa-sottovuoto/
+  - title: "Box Tisane e Zuppe"
+    url: /negozio/categoria/box-tisane-zuppe/
+  - title: "Box Ufficio"
+    url: /negozio/categoria/box-ufficio/
+  - divider: true
+  - title: "Tutti i box"
+    url: /negozio/

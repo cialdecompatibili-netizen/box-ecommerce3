@@ -1,1 +1,30 @@
 # English dropdown menus (empty = none). Each key must be IDENTICAL to a title in navigation.yml of this folder.
+
+Boxes:
+  - title: "Clean Home Box"
+    url: /en/shop/category/clean-home-box/
+  - title: "Paper & Bags Box"
+    url: /en/shop/category/paper-bags-box/
+  - title: "Personal Care Box"
+    url: /en/shop/category/personal-care-box/
+  - title: "Baby Box"
+    url: /en/shop/category/baby-box/
+  - title: "Pet Box"
+    url: /en/shop/category/pet-box/
+  - title: "Coffee & Breakfast Box"
+    url: /en/shop/category/coffee-breakfast-box/
+  - title: "Dried Fruit Box"
+    url: /en/shop/category/dried-fruit-box/
+  - title: "Dried Snacks Box"
+    url: /en/shop/category/dried-snacks-box/
+  - title: "Herbs & Spices Box"
+    url: /en/shop/category/herbs-spices-box/
+  - title: "Vacuum-Packed Pantry Box"
+    url: /en/shop/category/vacuum-pantry-box/
+  - title: "Herbal Tea & Soup Box"
+    url: /en/shop/category/herbal-tea-soup-box/
+  - title: "Office Box"
+    url: /en/shop/category/office-box/
+  - divider: true
+  - title: "All boxes"
+    url: /en/shop/
