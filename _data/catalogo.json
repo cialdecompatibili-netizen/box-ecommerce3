@@ -2,33 +2,674 @@
   "_nota": "Catalogo dello shop (serve solo con ecommerce: true in _config.yml). Prezzi in CENTESIMI. Ogni prodotto/categoria ha anche una pagina in _negozio/ (layout negozio-prodotto con pid=<id>, negozio-categoria con cid=<id>). L'id categoria e' riservato. tipo: digitale (niente spedizione) o fisico. visibile:false nasconde senza cancellare. TRADUZIONI: ogni categoria/prodotto puo' avere \"tr\": {\"en\": {\"nome\": \"...\", \"descrizione\": \"...\", \"descrizione_completa\": \"...\"}}; campo mancante = si usa l'italiano.",
   "categorie": [
     {
-      "nome": "Esempio",
-      "id": "esempio",
-      "icona": "🛍️",
+      "nome": "Box Casa Pulita",
+      "id": "box-casa-pulita",
+      "icona": "🧽",
+      "descrizione": "Detersivi e prodotti per la pulizia di casa, in abbonamento.",
+      "immagine": "",
       "tr": {
         "en": {
-          "nome": "Example"
+          "nome": "Clean Home Box",
+          "descrizione": "Cleaning products for the home, on subscription."
+        }
+      }
+    },
+    {
+      "nome": "Box Carta e Sacchetti",
+      "id": "box-carta-sacchetti",
+      "icona": "🧻",
+      "descrizione": "Carta igienica, rotoli cucina, fazzoletti e sacchetti: li ricevi a casa quando servono.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Paper & Bags Box",
+          "descrizione": "Toilet paper, kitchen rolls, tissues and bin bags delivered when you need them."
+        }
+      }
+    },
+    {
+      "nome": "Box Igiene Persona",
+      "id": "box-igiene",
+      "icona": "🧴",
+      "descrizione": "Sapone, shampoo, dentifricio e igiene quotidiana.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Personal Care Box",
+          "descrizione": "Soap, shampoo, toothpaste and daily hygiene."
+        }
+      }
+    },
+    {
+      "nome": "Box Bimbo",
+      "id": "box-bimbo",
+      "icona": "🍼",
+      "descrizione": "Salviette, creme e detergenti per la cura dei piu' piccoli.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Baby Box",
+          "descrizione": "Wipes, creams and cleansers for babies."
+        }
+      }
+    },
+    {
+      "nome": "Box Animali",
+      "id": "box-animali",
+      "icona": "🐾",
+      "descrizione": "Cibo, snack e igiene per cane e gatto.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Pet Box",
+          "descrizione": "Food, treats and hygiene for dogs and cats."
+        }
+      }
+    },
+    {
+      "nome": "Box Caffe' e Colazione",
+      "id": "box-caffe-colazione",
+      "icona": "☕",
+      "descrizione": "Caffe', te', biscotti e tutto per la colazione.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Coffee & Breakfast Box",
+          "descrizione": "Coffee, tea, biscuits and everything for breakfast."
+        }
+      }
+    },
+    {
+      "nome": "Box Frutta Essiccata",
+      "id": "box-frutta-essiccata",
+      "icona": "🍎",
+      "descrizione": "Frutta essiccata e confezionata sottovuoto, senza zuccheri aggiunti dove indicato.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Dried Fruit Box",
+          "descrizione": "Dried, vacuum-packed fruit, with no added sugar where stated."
+        }
+      }
+    },
+    {
+      "nome": "Box Snack Secchi",
+      "id": "box-snack-secchi",
+      "icona": "🥨",
+      "descrizione": "Snack essiccati e frutta secca per lo spuntino.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Dried Snacks Box",
+          "descrizione": "Dried snacks and nuts for a quick bite."
+        }
+      }
+    },
+    {
+      "nome": "Box Erbe e Spezie",
+      "id": "box-erbe-spezie",
+      "icona": "🌿",
+      "descrizione": "Erbe aromatiche e spezie essiccate, in confezioni sottovuoto che conservano l'aroma.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Herbs & Spices Box",
+          "descrizione": "Dried herbs and spices in vacuum packs that keep the aroma."
+        }
+      }
+    },
+    {
+      "nome": "Box Dispensa Sottovuoto",
+      "id": "box-dispensa-sottovuoto",
+      "icona": "🥫",
+      "descrizione": "Legumi, riso, farine e pasta in confezioni sottovuoto, per la dispensa di ogni mese.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Vacuum-Packed Pantry Box",
+          "descrizione": "Pulses, rice, flours and pasta in vacuum packs for the monthly pantry."
+        }
+      }
+    },
+    {
+      "nome": "Box Tisane e Zuppe",
+      "id": "box-tisane-zuppe",
+      "icona": "🍵",
+      "descrizione": "Miscele per tisane e verdure disidratate per zuppe e brodi.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Herbal Tea & Soup Box",
+          "descrizione": "Herbal tea blends and dehydrated vegetables for soups and broths."
+        }
+      }
+    },
+    {
+      "nome": "Box Ufficio",
+      "id": "box-ufficio",
+      "icona": "📎",
+      "descrizione": "Carta, cancelleria, caffe' e pulizia per studi e piccole aziende.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Office Box",
+          "descrizione": "Paper, stationery, coffee and cleaning for studios and small businesses."
+        }
+      }
+    },
+    {
+      "nome": "Componi: Casa e Pulizia",
+      "id": "singoli-casa",
+      "icona": "🧺",
+      "descrizione": "Scegli i singoli prodotti per la casa e crea il tuo box.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Build: Home & Cleaning",
+          "descrizione": "Pick single home products and build your own box."
+        }
+      }
+    },
+    {
+      "nome": "Componi: Persona, Bimbo e Animali",
+      "id": "singoli-persona",
+      "icona": "🧴",
+      "descrizione": "Scegli i singoli prodotti per la persona e crea il tuo box.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Build: Personal, Baby & Pets",
+          "descrizione": "Pick single personal care products and build your own box."
+        }
+      }
+    },
+    {
+      "nome": "Componi: Dispensa e Cucina",
+      "id": "singoli-dispensa",
+      "icona": "🥫",
+      "descrizione": "Scegli i singoli prodotti da dispensa e crea il tuo box.",
+      "immagine": "",
+      "tr": {
+        "en": {
+          "nome": "Build: Pantry & Kitchen",
+          "descrizione": "Pick single pantry products and build your own box."
         }
       }
     }
   ],
   "prodotti": [
     {
-      "tipo": "digitale",
-      "id": "prodotto-esempio",
-      "nome": "Prodotto di esempio",
-      "categoria": "esempio",
-      "prezzo_centesimi": 1000,
-      "descrizione": "Descrizione breve del prodotto di esempio.",
-      "descrizione_completa": "Descrizione completa del prodotto.\nOgni riga diventa un paragrafo.",
+      "tipo": "fisico",
+      "id": "casa-pulita-base",
+      "nome": "Box Casa Pulita Base",
+      "categoria": "box-casa-pulita",
+      "prezzo_centesimi": 1900,
+      "descrizione": "Contiene: detersivo piatti, detersivo lavatrice, sgrassatore e spugne.",
+      "descrizione_completa": "Contiene: detersivo piatti, detersivo lavatrice, sgrassatore e spugne.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
       "immagine": "",
-      "icona": "🛍️",
+      "icona": "🧽",
       "visibile": true,
       "tr": {
         "en": {
-          "nome": "Example product",
-          "descrizione": "Short description of the example product.",
-          "descrizione_completa": "Full description of the product.\nEach line becomes a paragraph."
+          "nome": "Clean Home Box Basic",
+          "descrizione": "Contains: dish soap, laundry detergent, degreaser and sponges.",
+          "descrizione_completa": "Contains: dish soap, laundry detergent, degreaser and sponges.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "casa-pulita-plus",
+      "nome": "Box Casa Pulita Plus",
+      "categoria": "box-casa-pulita",
+      "prezzo_centesimi": 3400,
+      "descrizione": "Contiene: tutto il Base piu' pastiglie lavastoviglie, anticalcare e panni in microfibra.",
+      "descrizione_completa": "Contiene: tutto il Base piu' pastiglie lavastoviglie, anticalcare e panni in microfibra.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🧽",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Clean Home Box Plus",
+          "descrizione": "Contains: everything in Basic plus dishwasher tablets, descaler and microfibre cloths.",
+          "descrizione_completa": "Contains: everything in Basic plus dishwasher tablets, descaler and microfibre cloths.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "carta-sacchetti",
+      "nome": "Box Carta e Sacchetti",
+      "categoria": "box-carta-sacchetti",
+      "prezzo_centesimi": 2400,
+      "descrizione": "Contiene: carta igienica, rotoli cucina, fazzoletti e sacchetti spazzatura.",
+      "descrizione_completa": "Contiene: carta igienica, rotoli cucina, fazzoletti e sacchetti spazzatura.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🧻",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Paper & Bags Box",
+          "descrizione": "Contains: toilet paper, kitchen rolls, tissues and bin bags.",
+          "descrizione_completa": "Contains: toilet paper, kitchen rolls, tissues and bin bags.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "igiene-base",
+      "nome": "Box Igiene Persona Base",
+      "categoria": "box-igiene",
+      "prezzo_centesimi": 1800,
+      "descrizione": "Contiene: sapone mani, bagnoschiuma, shampoo e dentifricio.",
+      "descrizione_completa": "Contiene: sapone mani, bagnoschiuma, shampoo e dentifricio.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🧴",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Personal Care Box Basic",
+          "descrizione": "Contains: hand soap, shower gel, shampoo and toothpaste.",
+          "descrizione_completa": "Contains: hand soap, shower gel, shampoo and toothpaste.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "igiene-plus",
+      "nome": "Box Igiene Persona Plus",
+      "categoria": "box-igiene",
+      "prezzo_centesimi": 3200,
+      "descrizione": "Contiene: tutto il Base piu' deodorante, balsamo e spazzolini.",
+      "descrizione_completa": "Contiene: tutto il Base piu' deodorante, balsamo e spazzolini.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🧴",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Personal Care Box Plus",
+          "descrizione": "Contains: everything in Basic plus deodorant, conditioner and toothbrushes.",
+          "descrizione_completa": "Contains: everything in Basic plus deodorant, conditioner and toothbrushes.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "bimbo",
+      "nome": "Box Bimbo",
+      "categoria": "box-bimbo",
+      "prezzo_centesimi": 3900,
+      "descrizione": "Contiene: salviette, crema cambio, detergente bagnetto e cotone.",
+      "descrizione_completa": "Contiene: salviette, crema cambio, detergente bagnetto e cotone.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🍼",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Baby Box",
+          "descrizione": "Contains: wipes, nappy cream, bath wash and cotton pads.",
+          "descrizione_completa": "Contains: wipes, nappy cream, bath wash and cotton pads.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "animali-cane",
+      "nome": "Box Cane",
+      "categoria": "box-animali",
+      "prezzo_centesimi": 3500,
+      "descrizione": "Contiene: cibo secco, snack, salviette e sacchetti igienici.",
+      "descrizione_completa": "Contiene: cibo secco, snack, salviette e sacchetti igienici.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🐾",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dog Box",
+          "descrizione": "Contains: dry food, treats, wipes and waste bags.",
+          "descrizione_completa": "Contains: dry food, treats, wipes and waste bags.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "animali-gatto",
+      "nome": "Box Gatto",
+      "categoria": "box-animali",
+      "prezzo_centesimi": 3200,
+      "descrizione": "Contiene: cibo secco o umido, snack e lettiera.",
+      "descrizione_completa": "Contiene: cibo secco o umido, snack e lettiera.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🐾",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Cat Box",
+          "descrizione": "Contains: dry or wet food, treats and cat litter.",
+          "descrizione_completa": "Contains: dry or wet food, treats and cat litter.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "caffe-colazione",
+      "nome": "Box Caffe' e Colazione",
+      "categoria": "box-caffe-colazione",
+      "prezzo_centesimi": 2600,
+      "descrizione": "Contiene: caffe' in grani o cialde, te', biscotti e zucchero.",
+      "descrizione_completa": "Contiene: caffe' in grani o cialde, te', biscotti e zucchero.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "☕",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Coffee & Breakfast Box",
+          "descrizione": "Contains: coffee beans or pods, tea, biscuits and sugar.",
+          "descrizione_completa": "Contains: coffee beans or pods, tea, biscuits and sugar.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "frutta-essiccata",
+      "nome": "Box Frutta Essiccata",
+      "categoria": "box-frutta-essiccata",
+      "prezzo_centesimi": 2200,
+      "descrizione": "Contiene: mele, banana, mango e fragole essiccate, in buste sottovuoto.",
+      "descrizione_completa": "Contiene: mele, banana, mango e fragole essiccate, in buste sottovuoto.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🍎",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dried Fruit Box",
+          "descrizione": "Contains: dried apple, banana, mango and strawberry in vacuum bags.",
+          "descrizione_completa": "Contains: dried apple, banana, mango and strawberry in vacuum bags.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "snack-secchi",
+      "nome": "Box Snack Secchi",
+      "categoria": "box-snack-secchi",
+      "prezzo_centesimi": 2800,
+      "descrizione": "Contiene: frutta secca, pomodori secchi e chips di verdure essiccate.",
+      "descrizione_completa": "Contiene: frutta secca, pomodori secchi e chips di verdure essiccate.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🥨",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dried Snacks Box",
+          "descrizione": "Contains: nuts, dried tomatoes and dehydrated vegetable chips.",
+          "descrizione_completa": "Contains: nuts, dried tomatoes and dehydrated vegetable chips.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "erbe-spezie",
+      "nome": "Box Erbe e Spezie",
+      "categoria": "box-erbe-spezie",
+      "prezzo_centesimi": 1800,
+      "descrizione": "Contiene: erbe aromatiche, peperoncino e spezie essiccate, in buste sottovuoto.",
+      "descrizione_completa": "Contiene: erbe aromatiche, peperoncino e spezie essiccate, in buste sottovuoto.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🌿",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Herbs & Spices Box",
+          "descrizione": "Contains: dried herbs, chilli and spices in vacuum bags.",
+          "descrizione_completa": "Contains: dried herbs, chilli and spices in vacuum bags.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "dispensa-sottovuoto",
+      "nome": "Box Dispensa Sottovuoto",
+      "categoria": "box-dispensa-sottovuoto",
+      "prezzo_centesimi": 3600,
+      "descrizione": "Contiene: legumi, riso, farina e pasta in confezioni sottovuoto.",
+      "descrizione_completa": "Contiene: legumi, riso, farina e pasta in confezioni sottovuoto.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🥫",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Vacuum-Packed Pantry Box",
+          "descrizione": "Contains: pulses, rice, flour and pasta in vacuum packs.",
+          "descrizione_completa": "Contains: pulses, rice, flour and pasta in vacuum packs.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "tisane-zuppe",
+      "nome": "Box Tisane e Zuppe",
+      "categoria": "box-tisane-zuppe",
+      "prezzo_centesimi": 2100,
+      "descrizione": "Contiene: miscele per tisane e verdure disidratate per zuppe.",
+      "descrizione_completa": "Contiene: miscele per tisane e verdure disidratate per zuppe.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "🍵",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Herbal Tea & Soup Box",
+          "descrizione": "Contains: herbal tea blends and dehydrated vegetables for soups.",
+          "descrizione_completa": "Contains: herbal tea blends and dehydrated vegetables for soups.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "ufficio",
+      "nome": "Box Ufficio",
+      "categoria": "box-ufficio",
+      "prezzo_centesimi": 3900,
+      "descrizione": "Contiene: carta A4, penne, caffe' e prodotti per la pulizia.",
+      "descrizione_completa": "Contiene: carta A4, penne, caffe' e prodotti per la pulizia.\nIn abbonamento: scegli la frequenza dopo l'ordine.\nContenuto e marchi indicativi, da confermare.",
+      "immagine": "",
+      "icona": "📎",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Office Box",
+          "descrizione": "Contains: A4 paper, pens, coffee and cleaning products.",
+          "descrizione_completa": "Contains: A4 paper, pens, coffee and cleaning products.\nSubscription: pick the frequency after ordering.\nContents and brands are indicative and to be confirmed."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "detersivo-piatti",
+      "nome": "Detersivo piatti 1 L",
+      "categoria": "singoli-casa",
+      "prezzo_centesimi": 290,
+      "descrizione": "Detersivo per piatti, flacone da 1 litro.",
+      "descrizione_completa": "Detersivo per piatti, flacone da 1 litro.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧺",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dish soap 1 L",
+          "descrizione": "Dish soap, 1 litre bottle.",
+          "descrizione_completa": "Dish soap, 1 litre bottle.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "detersivo-lavatrice",
+      "nome": "Detersivo lavatrice",
+      "categoria": "singoli-casa",
+      "prezzo_centesimi": 690,
+      "descrizione": "Detersivo liquido per lavatrice.",
+      "descrizione_completa": "Detersivo liquido per lavatrice.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧺",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Laundry detergent",
+          "descrizione": "Liquid laundry detergent.",
+          "descrizione_completa": "Liquid laundry detergent.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "carta-igienica",
+      "nome": "Carta igienica 8 rotoli",
+      "categoria": "singoli-casa",
+      "prezzo_centesimi": 490,
+      "descrizione": "Confezione da 8 rotoli.",
+      "descrizione_completa": "Confezione da 8 rotoli.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧺",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Toilet paper 8 rolls",
+          "descrizione": "Pack of 8 rolls.",
+          "descrizione_completa": "Pack of 8 rolls.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "sapone-mani",
+      "nome": "Sapone mani",
+      "categoria": "singoli-persona",
+      "prezzo_centesimi": 250,
+      "descrizione": "Sapone liquido per le mani.",
+      "descrizione_completa": "Sapone liquido per le mani.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧴",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Hand soap",
+          "descrizione": "Liquid hand soap.",
+          "descrizione_completa": "Liquid hand soap.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "shampoo",
+      "nome": "Shampoo",
+      "categoria": "singoli-persona",
+      "prezzo_centesimi": 390,
+      "descrizione": "Shampoo per uso quotidiano.",
+      "descrizione_completa": "Shampoo per uso quotidiano.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧴",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Shampoo",
+          "descrizione": "Shampoo for daily use.",
+          "descrizione_completa": "Shampoo for daily use.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "crocchette-gatto",
+      "nome": "Crocchette per gatto 1,5 kg",
+      "categoria": "singoli-persona",
+      "prezzo_centesimi": 1190,
+      "descrizione": "Crocchette per gatto adulto.",
+      "descrizione_completa": "Crocchette per gatto adulto.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🧴",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Cat kibble 1.5 kg",
+          "descrizione": "Kibble for adult cats.",
+          "descrizione_completa": "Kibble for adult cats.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "mele-essiccate",
+      "nome": "Mele essiccate 100 g",
+      "categoria": "singoli-dispensa",
+      "prezzo_centesimi": 450,
+      "descrizione": "Mele essiccate in busta sottovuoto.",
+      "descrizione_completa": "Mele essiccate in busta sottovuoto.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🥫",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dried apples 100 g",
+          "descrizione": "Dried apples in a vacuum bag.",
+          "descrizione_completa": "Dried apples in a vacuum bag.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "pomodori-secchi",
+      "nome": "Pomodori secchi 100 g",
+      "categoria": "singoli-dispensa",
+      "prezzo_centesimi": 390,
+      "descrizione": "Pomodori essiccati in busta sottovuoto.",
+      "descrizione_completa": "Pomodori essiccati in busta sottovuoto.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🥫",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Dried tomatoes 100 g",
+          "descrizione": "Dried tomatoes in a vacuum bag.",
+          "descrizione_completa": "Dried tomatoes in a vacuum bag.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "legumi-sottovuoto",
+      "nome": "Legumi sottovuoto 500 g",
+      "categoria": "singoli-dispensa",
+      "prezzo_centesimi": 350,
+      "descrizione": "Legumi secchi in confezione sottovuoto.",
+      "descrizione_completa": "Legumi secchi in confezione sottovuoto.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🥫",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Vacuum-packed pulses 500 g",
+          "descrizione": "Dried pulses in a vacuum pack.",
+          "descrizione_completa": "Dried pulses in a vacuum pack.\nYou can add it to your custom box."
+        }
+      }
+    },
+    {
+      "tipo": "fisico",
+      "id": "caffe-in-grani",
+      "nome": "Caffe' in grani 500 g",
+      "categoria": "singoli-dispensa",
+      "prezzo_centesimi": 790,
+      "descrizione": "Caffe' in grani, miscela da 500 g.",
+      "descrizione_completa": "Caffe' in grani, miscela da 500 g.\nPuoi aggiungerlo al tuo box personalizzato.",
+      "immagine": "",
+      "icona": "🥫",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Coffee beans 500 g",
+          "descrizione": "Coffee beans, 500 g blend.",
+          "descrizione_completa": "Coffee beans, 500 g blend.\nYou can add it to your custom box."
         }
       }
     }
